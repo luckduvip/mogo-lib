@@ -6,7 +6,7 @@ module.exports = {
 	plugins: [
 		new VueLoaderPlugin()
 	],
-	entry: './src/Mogo.js',
+	entry: './src/main.js',
 	output: {
 		path: path.resolve(__dirname, './dist'),
 		publicPath: '/dist/',
@@ -97,7 +97,7 @@ module.exports = {
 }
 
 if (process.env.NODE_ENV === 'production') {
-	module.exports.entry= './src/App.vue';
+	module.exports.entry= './src/Mogo.js';
 	module.exports.devtool = '#source-map'
 	// http://vue-loader.vuejs.org/en/workflow/production.html
 	module.exports.plugins = (module.exports.plugins || []).concat([
