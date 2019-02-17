@@ -478,42 +478,12 @@ u.fixStatusBar = function(el){
 		console.warn('$api.fixStatusBar Function need el param, el param must be DOM Element');
 		return 0;
 	}
-	el.style.paddingTop = api.safeArea.top + 'px';
+	if(window.api){
+		el.style.paddingTop = api.safeArea.top + 'px';
+	}
 	return el.offsetHeight;
 };
 
-// u.fixIos7Bar = function(el){
-// 	if(!u.isElement(el)){
-// 		console.warn('$api.fixIos7Bar Function need el param, el param must be DOM Element');
-// 		return;
-// 	}
-// 	var strDM = api.systemType;
-// 	if (strDM == 'ios') {
-// 		var strSV = api.systemVersion;
-// 		var numSV = parseInt(strSV,10);
-// 		var fullScreen = api.fullScreen;
-// 		var iOS7StatusBarAppearance = api.iOS7StatusBarAppearance;
-// 		if (numSV >= 7 && !fullScreen && iOS7StatusBarAppearance) {
-// 			el.style.paddingTop = '20px';
-// 		}
-// 	}
-// };
-// u.fixStatusBar = function(el){
-// 	if(!u.isElement(el)){
-// 		console.warn('$api.fixStatusBar Function need el param, el param must be DOM Element');
-// 		return;
-// 	}
-// 	var sysType = api.systemType;
-// 	if(sysType == 'ios'){
-// 		u.fixIos7Bar(el);
-// 	}else if(sysType == 'android'){
-// 		var ver = api.systemVersion;
-// 		ver = parseFloat(ver);
-// 		if(ver >= 4.4){
-// 			el.style.paddingTop = '25px';
-// 		}
-// 	}
-// };
 u.toast = function(title, text, time){
 	var opts = {};
 	var show = function(opts, time){
