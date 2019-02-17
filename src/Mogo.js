@@ -1,5 +1,4 @@
 import ApiTool from './api'
-console.log('ssss');
 let Mogo = {
 	init() {},
 	ApiTool: ApiTool,
@@ -24,6 +23,7 @@ let Mogo = {
 			cb();
 			if(!window.api){
 				window.api = {
+					safeArea: {},
 					setPrefs: function(){},
 					getPrefs: function(){},
 					confirm: function(info){ console.log('confirm',info); },
