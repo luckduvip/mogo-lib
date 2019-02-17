@@ -1,4 +1,5 @@
 import ApiTool from './api'
+console.log('ssss');
 let Mogo = {
 	init() {},
 	ApiTool: ApiTool,
@@ -143,10 +144,8 @@ let Mogo = {
 	rmStorage(key){
 		return ApiTool.rmStorage(key);
 	},
-
 	clearStorage(){
 		return ApiTool.clearStorage();
 	},
-
 }
 export default Mogo;
